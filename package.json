@@ -26,28 +26,27 @@
     "node": ">=23.0.0"
   },
   "scripts": {
-    "build": "pnpm run -F \"@app/*\" build",
-    "compile": "pnpm run build && electron-builder build --config electron-builder.mjs",
-    "test": "pnpx playwright test ./tests/e2e.spec.ts",
+    "build": "npm run build -ws --if-present",
+    "compile": "npm run build && electron-builder build --config electron-builder.mjs",
+    "test": "npx playwright test ./tests/e2e.spec.ts",
     "start": "node packages/dev-mode.js",
-    "typecheck": "pnpm run typecheck -ws --if-present",
+    "typecheck": "npm run typecheck -ws --if-present",
     "create-renderer": "cd packages && node ./integrate-renderer/create-renderer.js",
-    "integrate-renderer": "pnpm start --workspace @app/integrate-renderer",
-    "init": "pnpm run create-renderer && pnpm run integrate-renderer && pnpm install --ignore-scripts"
+    "integrate-renderer": "npm start --workspace @app/integrate-renderer",
+    "init": "npm run create-renderer && npm run integrate-renderer && npm install --ignore-scripts"
   },
   "devDependencies": {
     "@npmcli/map-workspaces": "^6.0.0",
     "@playwright/test": "1.58.2",
     "@types/node": "25.5.0",
     "create-vite": "9.0.3",
-    "dmg-license": "^1.0.11",
     "electron": "41.0.3",
     "electron-builder": "26.8.1",
     "glob": "13.0.6",
     "playwright": "^1.58.2"
   },
   "dependencies": {
-    "@app/main": "workspace:*"
+    "@app/main": "*"
   },
   "allowScripts": {
     "electron@41.0.3": true,

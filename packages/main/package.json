@@ -12,12 +12,12 @@
     }
   },
   "dependencies": {
-    "@app/preload": "workspace:*",
-    "@app/renderer": "workspace:*",
+    "@app/preload": "*",
+    "@app/renderer": "*",
     "electron-updater": "6.8.3"
   },
   "devDependencies": {
-    "@app/electron-versions": "workspace:*",
+    "@app/electron-versions": "*",
     "electron-devtools-installer": "4.0.0",
     "typescript": "6.0.2",
     "vite": "8.0.3"

@@ -13,7 +13,7 @@ export default /** @type import('electron-builder').Configuration */
   },
   generateUpdatesFilesForAllChannels: true,
   productName: "Electron Fuckery",
-  appID: "dev.laratheprotogen.electronfuckery",
+  appId: "dev.laratheprotogen.electronfuckery",
   linux: {
     target: ["deb", "rpm", "AppImage", "pacman"],
     category: "Network",
