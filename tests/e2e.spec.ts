@@ -21,14 +21,15 @@ const test = base.extend<TestFixtures>({
       /**
        * Executable path depends on root package name!
        */
-      let executablePattern: string = "dist/linux-unpacked/electronfuckery";
+      let executablePattern: string =
+        "dist/linux-unpacked/electronfuckery{,.*}";
       switch (platform) {
         case "darwin": {
           executablePattern =
-            "dist/mac-arm64/Electron Fuckery.app/Contents/MacOS/Electron Fuckery";
+            "dist/mac-arm64/Electron Fuckery.app/Contents/MacOS/Electron{,.*}";
         }
         case "win32": {
-          executablePattern = "dist/win-unpacked/Electron Fuckery.exe";
+          executablePattern = "dist/win-unpacked/Electron{,.*}";
         }
       }
 

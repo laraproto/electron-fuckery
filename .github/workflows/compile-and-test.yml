@@ -65,9 +65,6 @@ jobs:
         env:
           VITE_DISTRIBUTION_CHANNEL: ${{inputs.distribution-channel}}
 
-      - run: brew install tree && tree "dist/mac-arm64/Electron Fuckery.app/Contents/MacOS"
-        if: matrix.os == 'macos-latest'
-
       - run: npm run test --if-present
         if: matrix.os != 'ubuntu-latest'
 
