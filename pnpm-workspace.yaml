@@ -1,0 +1,7 @@
+packages:
+  # all packages in direct subdirs of packages/
+  - 'packages/*'
+allowBuilds:
+  electron: true
+  electron-winstaller: true
+nodeLinker: hoisted
