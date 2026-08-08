@@ -57,6 +57,9 @@ jobs:
         with:
           renderer-template: ${{inputs.renderer-template}}
 
+      - run: apt-get update && apt-get install -y libnspr4
+        if: matrix.os == 'ubuntu-latest'
+
       - run: npm version "${{inputs.app-version}}" --no-git-tag-version
       - run: npm run compile -- -p never
         env:
