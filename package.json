@@ -2,7 +2,7 @@
   "name": "electronfuckery",
   "desktopName": "Electron Fuckery",
   "description": "uwu",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "type": "module",
   "build": {
