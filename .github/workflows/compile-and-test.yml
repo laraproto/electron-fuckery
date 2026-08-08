@@ -65,10 +65,10 @@ jobs:
         env:
           VITE_DISTRIBUTION_CHANNEL: ${{inputs.distribution-channel}}
 
-      - run: tree dist/win-unpacked
+      - run: ls dist/win-unpacked
         if: matrix.os == 'windows-latest'
 
-      - run: tree dist/mac-unpacked
+      - run: brew install tree && tree dist/mac-unpacked
         if: matrix.os == 'macos-latest'
 
       - run: npm run test --if-present
