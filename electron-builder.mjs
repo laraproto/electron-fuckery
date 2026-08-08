@@ -13,7 +13,6 @@ export default /** @type import('electron-builder').Configuration */
   },
   generateUpdatesFilesForAllChannels: true,
   productName: "Electron Fuckery",
-  desktopName: "Electron Fuckery",
   appId: "dev.laratheprotogen.electronfuckery",
   linux: {
     target: ["deb", "rpm", "AppImage"],

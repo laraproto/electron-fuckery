@@ -1,11 +1,13 @@
 {
   "name": "electronfuckery",
+  "desktopName": "Electron Fuckery",
   "description": "uwu",
   "version": "0.0.1",
   "private": true,
   "type": "module",
   "build": {
     "appId": "dev.laratheprotogen.electronfuckery",
+    "desktopName": "Electron Fuckery",
     "mac": {
       "category": "public.app-category.utilities"
     },
