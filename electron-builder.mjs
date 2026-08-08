@@ -10,12 +10,18 @@ export default /** @type import('electron-builder').Configuration */
     buildResources: "buildResources",
   },
   generateUpdatesFilesForAllChannels: true,
+  appId: "dev.laratheprotogen.electronfuckery",
+  productName: "Electron Fuckery",
   linux: {
     target: ["deb", "rpm", "AppImage", "pacman"],
+    category: "Network",
   },
   mac: {
-    appId: "dev.laratheprotogen.electronfuckery",
     target: ["dmg"],
+    category: "public.app-category.utilities",
+  },
+  win: {
+    target: ["nsis"],
   },
   /**
    * It is recommended to avoid using non-standard characters such as spaces in artifact names,

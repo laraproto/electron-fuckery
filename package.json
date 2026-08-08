@@ -1,13 +1,22 @@
 {
-  "name": "root",
-  "description": "Secure boilerplate for Electron app based on Vite",
-  "version": "3.1.0",
+  "name": "electronfuckery",
+  "description": "Hehe",
+  "version": "0.0.1",
   "private": true,
   "type": "module",
+  "build": {
+    "appId": "dev.laratheprotogen.electronfuckery",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "linux": {
+      "category": "Network"
+    }
+  },
   "author": {
-    "email": "kozackunisoft@gmail.com",
-    "name": "Alex Kozack",
-    "url": "https://kozack.me"
+    "email": "laraproto@proton.me",
+    "name": "Lara",
+    "url": "https://laratheprotogen.dev"
   },
   "main": "packages/entry-point.mjs",
   "workspaces": [
