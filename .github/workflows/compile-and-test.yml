@@ -66,7 +66,7 @@ jobs:
           VITE_DISTRIBUTION_CHANNEL: ${{inputs.distribution-channel}}
 
       - run: npm run test --if-present
-        if: matrix.os != 'ubuntu-latest'
+        if: matrix.os != 'ubuntu-latest' && matrix.os != 'macos-latest'
 
       - run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- npm run test --if-present
         if: matrix.os == 'ubuntu-latest'

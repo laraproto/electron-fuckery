@@ -20,7 +20,7 @@ export default /** @type import('electron-builder').Configuration */
     syncDesktopName: true,
   },
   mac: {
-    target: ["dmg", "zip"],
+    target: ["zip"],
     category: "public.app-category.utilities",
   },
   win: {
