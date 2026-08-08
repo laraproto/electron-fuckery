@@ -7,7 +7,7 @@ on:
         description: Define what vite template should be used to create renderer in case if renderer package doesn't exist
         required: false
         type: string
-        default: ''
+        default: ""
       app-version:
         required: true
         type: string
@@ -17,7 +17,7 @@ on:
 
 defaults:
   run:
-    shell: 'bash'
+    shell: "bash"
 
 permissions:
   contents: write
@@ -34,7 +34,7 @@ jobs:
   typeckeck:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: ./.github/actions/init-template-with-renderer
         name: Setup boilerplate
         with:
@@ -51,7 +51,7 @@ jobs:
           - macos-latest
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: ./.github/actions/init-template-with-renderer
         name: Setup boilerplate
         with:
@@ -70,7 +70,7 @@ jobs:
 
       - uses: actions/attest-build-provenance@v4
         with:
-          subject-path: "dist/root*, dist/latest*.yml"
+          subject-path: "dist/Electron*, dist/latest*.yml"
 
       - name: Upload compiled app
         uses: actions/upload-artifact@v7
