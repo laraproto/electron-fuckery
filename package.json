@@ -17,9 +17,6 @@
     "email": "laraproto@proton.me",
     "name": "Lara",
     "url": "https://laratheprotogen.dev"
-    "email": "laraproto@proton.me",
-    "name": "Lara",
-    "url": "https://laratheprotogen.dev"
   },
   "main": "packages/entry-point.mjs",
   "workspaces": [
