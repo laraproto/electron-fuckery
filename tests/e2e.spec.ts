@@ -26,10 +26,10 @@ const test = base.extend<TestFixtures>({
       switch (platform) {
         case "darwin": {
           executablePattern =
-            "dist/mac-arm64/Electron Fuckery.app/Contents/MacOS/Electron{,.*}";
+            "dist/mac-arm64/Electron Fuckery.app/Contents/MacOS/Electron*";
         }
         case "win32": {
-          executablePattern = "dist/win-unpacked/Electron{,.*}";
+          executablePattern = "dist/win-unpacked/Electron Fuckery.exe";
         }
       }
 
