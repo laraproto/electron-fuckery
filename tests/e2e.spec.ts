@@ -21,9 +21,12 @@ const test = base.extend<TestFixtures>({
       /**
        * Executable path depends on root package name!
        */
-      let executablePattern = "dist/linux-unpacked/electronfuckery";
+      let executablePattern: string | string[] = [
+        "dist/*/electronfuckery",
+        "dist/*/Electron",
+      ];
       if (platform === "darwin") {
-        executablePattern += "/Contents/*/";
+        executablePattern.push("/Contents/*/electron");
       }
 
       const [executablePath] = globSync(executablePattern);
