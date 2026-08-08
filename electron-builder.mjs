@@ -8,10 +8,12 @@ export default /** @type import('electron-builder').Configuration */
   directories: {
     output: "dist",
     buildResources: "buildResources",
+    output: "dist",
+    buildResources: "buildResources",
   },
   generateUpdatesFilesForAllChannels: true,
-  appId: "dev.laratheprotogen.electronfuckery",
   productName: "Electron Fuckery",
+  appID: "dev.laratheprotogen.electronfuckery",
   linux: {
     target: ["deb", "rpm", "AppImage", "pacman"],
     category: "Network",
